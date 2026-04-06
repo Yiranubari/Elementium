@@ -4,7 +4,10 @@ import ReadMoreLink from "./ui/ReadMoreLink.jsx";
 
 export default function AboutSection() {
   return (
-    <section id="studio" className="relative overflow-hidden bg-white py-16 sm:py-20">
+    <section
+      id="studio"
+      className="relative overflow-hidden bg-white py-16 sm:py-20"
+    >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div className="relative z-10 max-w-xl">
           <h2 className="text-3xl font-semibold leading-tight tracking-tight text-black sm:text-4xl">
@@ -12,9 +15,10 @@ export default function AboutSection() {
           </h2>
 
           <p className="mt-5 text-sm leading-7 text-black/65 sm:text-base">
-            We are committed to building outcomes that make real progress possible.
-            Through thoughtful collaboration and practical execution, we help teams
-            move from ideas to measurable impact with clarity and confidence.
+            We are committed to building outcomes that make real progress
+            possible. Through thoughtful collaboration and practical execution,
+            we help teams move from ideas to measurable impact with clarity and
+            confidence.
           </p>
 
           <ReadMoreLink href="#" className="mt-6" />
@@ -39,7 +43,7 @@ export default function AboutSection() {
 
           <div className="relative z-10 mx-auto h-72 w-72 sm:h-80 sm:w-80">
             <CirclePhoto
-              src="/assets/images/team-meeting.jpg"
+              src="/assets/images/image 348.png"
               alt="Team meeting and collaboration"
               size="h-full w-full"
             />

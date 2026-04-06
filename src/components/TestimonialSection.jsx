@@ -3,11 +3,36 @@ import CirclePhoto from "./ui/CirclePhoto.jsx";
 import SectionHeading from "./ui/SectionHeading.jsx";
 
 const CLIENT_PHOTOS = [
-  { src: "/assets/images/client-1.jpg", alt: "Client portrait 1", size: "h-14 w-14", pos: "left-0 top-6" },
-  { src: "/assets/images/client-2.jpg", alt: "Client portrait 2", size: "h-16 w-16", pos: "left-6 bottom-4" },
-  { src: "/assets/images/client-3.jpg", alt: "Client portrait 3", size: "h-20 w-20", pos: "right-0 top-4" },
-  { src: "/assets/images/client-4.jpg", alt: "Client portrait 4", size: "h-14 w-14", pos: "right-10 bottom-2" },
-  { src: "/assets/images/client-5.jpg", alt: "Client portrait 5", size: "h-12 w-12", pos: "left-1/2 -translate-x-1/2 -top-6" },
+  {
+    src: "/assets/images/Ellipse 256.png",
+    alt: "Client portrait 1",
+    size: "h-14 w-14",
+    pos: "left-0 top-6",
+  },
+  {
+    src: "/assets/images/Ellipse 257.png",
+    alt: "Client portrait 2",
+    size: "h-16 w-16",
+    pos: "left-6 bottom-4",
+  },
+  {
+    src: "/assets/images/Ellipse 258.png",
+    alt: "Client portrait 3",
+    size: "h-20 w-20",
+    pos: "right-0 top-4",
+  },
+  {
+    src: "/assets/images/Ellipse 259.png",
+    alt: "Client portrait 4",
+    size: "h-14 w-14",
+    pos: "right-10 bottom-2",
+  },
+  {
+    src: "/assets/images/Ellipse 260.png",
+    alt: "Client portrait 5",
+    size: "h-12 w-12",
+    pos: "left-1/2 -translate-x-1/2 -top-6",
+  },
 ];
 
 export default function TestimonialSection() {
@@ -33,15 +58,18 @@ export default function TestimonialSection() {
             </div>
 
             <p className="text-sm leading-7 text-black/70 sm:text-base">
-              Elementium enabled our team to move from scattered ideas to a clear,
-              confident plan. Their thoughtful guidance and collaborative approach
-              meant every decision felt intentional, and every iteration brought us
-              closer to the outcomes we actually care about.
+              Elementium enabled our team to move from scattered ideas to a
+              clear, confident plan. Their thoughtful guidance and collaborative
+              approach meant every decision felt intentional, and every
+              iteration brought us closer to the outcomes we actually care
+              about.
             </p>
 
             <div className="mt-6 text-sm font-semibold text-black">
               Alex Carter
-              <span className="ml-2 text-black/60">Founder, Northline Studio</span>
+              <span className="ml-2 text-black/60">
+                Founder, Northline Studio
+              </span>
             </div>
 
             <p className="mt-1 text-xs uppercase tracking-wide text-black/50">
@@ -52,7 +80,11 @@ export default function TestimonialSection() {
           <div className="pointer-events-none absolute inset-0">
             {CLIENT_PHOTOS.map((photo) => (
               <div key={photo.src} className={`absolute ${photo.pos}`}>
-                <CirclePhoto src={photo.src} alt={photo.alt} size={photo.size} />
+                <CirclePhoto
+                  src={photo.src}
+                  alt={photo.alt}
+                  size={photo.size}
+                />
               </div>
             ))}
           </div>
@@ -61,4 +93,3 @@ export default function TestimonialSection() {
     </section>
   );
 }
-

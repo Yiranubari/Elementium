@@ -2,12 +2,42 @@ import CirclePhoto from "./ui/CirclePhoto.jsx";
 import DecorativeBlob from "./ui/DecorativeBlob.jsx";
 
 const TEAM_PHOTOS = [
-  { src: "/assets/images/team-1.jpg", alt: "Team member portrait 1", size: "h-16 w-16", pos: "left-[2%] top-8" },
-  { src: "/assets/images/team-2.jpg", alt: "Team member portrait 2", size: "h-20 w-20", pos: "left-[18%] top-2" },
-  { src: "/assets/images/team-3.jpg", alt: "Team member portrait 3", size: "h-24 w-24", pos: "left-[36%] top-10" },
-  { src: "/assets/images/team-4.jpg", alt: "Team member portrait 4", size: "h-16 w-16", pos: "left-[56%] top-1" },
-  { src: "/assets/images/team-5.jpg", alt: "Team member portrait 5", size: "h-20 w-20", pos: "left-[72%] top-9" },
-  { src: "/assets/images/team-6.jpg", alt: "Team member portrait 6", size: "h-16 w-16", pos: "left-[88%] top-4" },
+  {
+    src: "/assets/images/Ellipse 258.png",
+    alt: "Team member portrait 1",
+    size: "h-16 w-16",
+    pos: "left-[2%] top-8",
+  },
+  {
+    src: "/assets/images/Ellipse 259.png",
+    alt: "Team member portrait 2",
+    size: "h-20 w-20",
+    pos: "left-[18%] top-2",
+  },
+  {
+    src: "/assets/images/Ellipse 260.png",
+    alt: "Team member portrait 3",
+    size: "h-24 w-24",
+    pos: "left-[36%] top-10",
+  },
+  {
+    src: "/assets/images/Ellipse 267.png",
+    alt: "Team member portrait 4",
+    size: "h-16 w-16",
+    pos: "left-[56%] top-1",
+  },
+  {
+    src: "/assets/images/Ellipse 265.png",
+    alt: "Team member portrait 5",
+    size: "h-20 w-20",
+    pos: "left-[72%] top-9",
+  },
+  {
+    src: "/assets/images/Ellipse 266.png",
+    alt: "Team member portrait 6",
+    size: "h-16 w-16",
+    pos: "left-[88%] top-4",
+  },
 ];
 
 export default function HeroSection() {
@@ -28,9 +58,9 @@ export default function HeroSection() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-6 text-black/65 sm:text-base">
-            We are dedicated to turning ambition into practical outcomes. Partner
-            with our team to shape clearer strategies, build meaningful products,
-            and make steady progress toward what matters most.
+            We are dedicated to turning ambition into practical outcomes.
+            Partner with our team to shape clearer strategies, build meaningful
+            products, and make steady progress toward what matters most.
           </p>
         </div>
 
