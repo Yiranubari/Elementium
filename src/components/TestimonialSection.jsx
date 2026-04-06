@@ -77,7 +77,7 @@ export default function TestimonialSection() {
             </p>
           </div>
 
-          <div className="pointer-events-none absolute inset-0">
+          <div className="pointer-events-none absolute inset-0 hidden sm:block">
             {CLIENT_PHOTOS.map((photo, idx) => (
               <div
                 key={photo.src}
