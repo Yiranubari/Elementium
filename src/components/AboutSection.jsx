@@ -9,7 +9,7 @@ export default function AboutSection() {
       className="relative overflow-hidden bg-white py-16 sm:py-20"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <div className="relative z-10 max-w-xl">
+        <div className="relative z-10 max-w-xl motion-fade-up">
           <h2 className="text-3xl font-semibold leading-tight tracking-tight text-black sm:text-4xl">
             Tomorrow should be better than today
           </h2>
@@ -24,7 +24,7 @@ export default function AboutSection() {
           <ReadMoreLink href="#" className="mt-6" />
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
+        <div className="relative mx-auto w-full max-w-md motion-fade-up motion-delay-1 lg:max-w-lg">
           <DecorativeBlob
             variant="pink"
             className="-left-8 -top-8 h-44 w-44 text-pink-200/80 blur-2xl"
@@ -41,7 +41,7 @@ export default function AboutSection() {
             <path d="M5 68c30-55 70-55 100 0s70 55 100 0 70-55 100 0" />
           </svg>
 
-          <div className="relative z-10 mx-auto h-72 w-72 sm:h-80 sm:w-80">
+          <div className="relative z-10 mx-auto h-72 w-72 card-hover sm:h-80 sm:w-80">
             <CirclePhoto
               src="/assets/images/image 348.png"
               alt="Team meeting and collaboration"
@@ -50,7 +50,7 @@ export default function AboutSection() {
           </div>
 
           <svg
-            className="pointer-events-none absolute -bottom-1 -left-3 h-12 w-12 text-rose-400"
+            className="pointer-events-none absolute -bottom-1 -left-3 h-12 w-12 text-rose-400 motion-pulse-soft"
             viewBox="0 0 100 100"
             fill="currentColor"
             aria-hidden="true"
@@ -59,7 +59,7 @@ export default function AboutSection() {
           </svg>
 
           <svg
-            className="pointer-events-none absolute -right-4 top-4 h-10 w-10 text-rose-300"
+            className="pointer-events-none absolute -right-4 top-4 h-10 w-10 text-rose-300 motion-pulse-soft"
             viewBox="0 0 100 100"
             fill="currentColor"
             aria-hidden="true"

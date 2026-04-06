@@ -21,10 +21,12 @@ export default function ReadMoreLink({
           "group-hover:border-black/60",
         ].join(" ")}
       />
-      <span aria-hidden="true" className="text-black/60 transition-colors group-hover:text-black/90">
+      <span
+        aria-hidden="true"
+        className="text-black/60 transition-all duration-300 group-hover:translate-x-1 group-hover:text-black/90"
+      >
         →
       </span>
     </a>
   );
 }
-

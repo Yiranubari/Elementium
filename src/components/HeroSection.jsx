@@ -45,7 +45,7 @@ export default function HeroSection() {
     <section id="home" className="relative overflow-hidden bg-white pt-28">
       <div className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="relative mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-black sm:text-5xl md:text-6xl">
+          <h1 className="motion-fade-up text-4xl font-semibold leading-tight tracking-tight text-black sm:text-5xl md:text-6xl">
             The{" "}
             <span className="border-b-4 border-yellow-400 pb-0.5">
               thinkers
@@ -57,7 +57,7 @@ export default function HeroSection() {
             quo with us
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-6 text-black/65 sm:text-base">
+          <p className="motion-fade-up motion-delay-1 mx-auto mt-6 max-w-2xl text-sm leading-6 text-black/65 sm:text-base">
             We are dedicated to turning ambition into practical outcomes.
             Partner with our team to shape clearer strategies, build meaningful
             products, and make steady progress toward what matters most.
@@ -65,8 +65,12 @@ export default function HeroSection() {
         </div>
 
         <div className="relative mt-12 h-28 sm:h-32">
-          {TEAM_PHOTOS.map((photo) => (
-            <div key={photo.src} className={`absolute ${photo.pos}`}>
+          {TEAM_PHOTOS.map((photo, idx) => (
+            <div
+              key={photo.src}
+              className={`absolute motion-fade-up ${idx % 2 === 0 ? "motion-float-slow" : "motion-float-slow motion-float-delay"} ${photo.pos}`}
+              style={{ animationDelay: `${120 + idx * 70}ms` }}
+            >
               <CirclePhoto src={photo.src} alt={photo.alt} size={photo.size} />
             </div>
           ))}
@@ -79,7 +83,7 @@ export default function HeroSection() {
       />
 
       <svg
-        className="pointer-events-none absolute left-0 top-44 h-24 w-24 text-rose-400/80 sm:h-32 sm:w-32"
+        className="pointer-events-none absolute left-0 top-44 h-24 w-24 text-rose-400/80 motion-pulse-soft sm:h-32 sm:w-32"
         viewBox="0 0 140 140"
         fill="none"
         stroke="currentColor"

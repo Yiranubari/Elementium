@@ -19,7 +19,7 @@ export default function NewsletterSection() {
         className="-right-8 -top-8 h-28 w-28 text-violet-500/90 sm:h-36 sm:w-36"
       />
 
-      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl px-4 text-center motion-fade-up sm:px-6 lg:px-8">
         <h2 className="text-3xl font-semibold leading-tight tracking-tight text-black sm:text-5xl">
           Subscribe to our newsletter
         </h2>
@@ -42,12 +42,12 @@ export default function NewsletterSection() {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             placeholder="Enter your email"
-            className="h-11 w-full rounded-lg border border-black/15 bg-white px-4 text-sm text-black outline-none transition focus:border-black/35"
+            className="h-11 w-full rounded-lg border border-black/15 bg-white px-4 text-sm text-black outline-none transition-all duration-300 focus:border-black/35 focus:shadow-[0_0_0_3px_rgba(16,185,129,0.18)]"
           />
 
           <button
             type="submit"
-            className="h-11 rounded-lg bg-black px-6 text-sm font-semibold text-white transition-opacity hover:opacity-85"
+            className="h-11 rounded-lg bg-black px-6 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:opacity-85"
           >
             Subscribe Now
           </button>
@@ -56,4 +56,3 @@ export default function NewsletterSection() {
     </section>
   );
 }
-

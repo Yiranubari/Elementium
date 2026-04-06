@@ -40,7 +40,7 @@ export default function TestimonialSection() {
 
   return (
     <section id="testimonials" className="relative bg-white py-16 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 motion-fade-up sm:px-6 lg:px-8">
         <div className="text-center">
           <SectionHeading
             as="h2"
@@ -52,7 +52,7 @@ export default function TestimonialSection() {
         </div>
 
         <div className="relative mt-10 flex justify-center">
-          <div className="relative w-full max-w-3xl rounded-3xl bg-slate-100 px-6 py-10 text-left shadow-sm sm:px-10 sm:py-12">
+          <div className="card-hover relative w-full max-w-3xl rounded-3xl bg-slate-100 px-6 py-10 text-left shadow-sm sm:px-10 sm:py-12">
             <div className="pointer-events-none absolute -top-8 left-6 text-6xl text-emerald-300 sm:text-7xl">
               <span aria-hidden="true">“</span>
             </div>
@@ -78,8 +78,11 @@ export default function TestimonialSection() {
           </div>
 
           <div className="pointer-events-none absolute inset-0">
-            {CLIENT_PHOTOS.map((photo) => (
-              <div key={photo.src} className={`absolute ${photo.pos}`}>
+            {CLIENT_PHOTOS.map((photo, idx) => (
+              <div
+                key={photo.src}
+                className={`absolute ${photo.pos} ${idx % 2 === 0 ? "motion-float-slow" : "motion-float-slow motion-float-delay"}`}
+              >
                 <CirclePhoto
                   src={photo.src}
                   alt={photo.alt}

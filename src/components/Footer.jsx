@@ -1,5 +1,10 @@
 const companyLinks = ["About", "Studio", "Services", "FAQs"];
-const policyLinks = ["Terms of Service", "Privacy Policy", "Cookie Policy", "Accessibility"];
+const policyLinks = [
+  "Terms of Service",
+  "Privacy Policy",
+  "Cookie Policy",
+  "Accessibility",
+];
 const socialLinks = ["Instagram", "LinkedIn", "X (Twitter)", "YouTube"];
 
 export default function Footer() {
@@ -16,7 +21,10 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               {companyLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-xs text-black/70 transition-colors hover:text-black">
+                  <a
+                    href="#"
+                    className="text-xs text-black/70 transition-all duration-300 hover:translate-x-0.5 hover:text-black"
+                  >
                     {item}
                   </a>
                 </li>
@@ -25,11 +33,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-black">Terms & Policies</h3>
+            <h3 className="text-sm font-semibold text-black">
+              Terms & Policies
+            </h3>
             <ul className="mt-4 space-y-2">
               {policyLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-xs text-black/70 transition-colors hover:text-black">
+                  <a
+                    href="#"
+                    className="text-xs text-black/70 transition-all duration-300 hover:translate-x-0.5 hover:text-black"
+                  >
                     {item}
                   </a>
                 </li>
@@ -42,7 +55,10 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               {socialLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-xs text-black/70 transition-colors hover:text-black">
+                  <a
+                    href="#"
+                    className="text-xs text-black/70 transition-all duration-300 hover:translate-x-0.5 hover:text-black"
+                  >
                     {item}
                   </a>
                 </li>
@@ -54,12 +70,18 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-black">Contact</h3>
             <ul className="mt-4 space-y-2 text-xs text-black/70">
               <li>
-                <a href="mailto:hello@elementium.co" className="transition-colors hover:text-black">
+                <a
+                  href="mailto:hello@elementium.co"
+                  className="transition-colors duration-300 hover:text-black"
+                >
                   hello@elementium.co
                 </a>
               </li>
               <li>
-                <a href="tel:+4402034567890" className="transition-colors hover:text-black">
+                <a
+                  href="tel:+4402034567890"
+                  className="transition-colors duration-300 hover:text-black"
+                >
                   +44 020 3456 7890
                 </a>
               </li>
@@ -78,4 +100,3 @@ export default function Footer() {
     </footer>
   );
 }
-

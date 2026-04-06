@@ -1,6 +1,7 @@
 export default function DecorativeBlob({ variant = "purple", className = "" }) {
   const base =
-    "pointer-events-none select-none absolute opacity-90 " + className;
+    "pointer-events-none select-none absolute opacity-90 motion-float-slow " +
+    className;
 
   if (variant === "red") {
     return (
@@ -48,12 +49,7 @@ export default function DecorativeBlob({ variant = "purple", className = "" }) {
 
   // default: purple "teardrop"
   return (
-    <svg
-      className={base}
-      viewBox="0 0 120 120"
-      fill="none"
-      aria-hidden="true"
-    >
+    <svg className={base} viewBox="0 0 120 120" fill="none" aria-hidden="true">
       <path
         d="M60 8c20 26 46 45 46 68 0 24-21 36-46 36S14 100 14 76c0-23 26-42 46-68Z"
         fill="currentColor"
@@ -66,4 +62,3 @@ export default function DecorativeBlob({ variant = "purple", className = "" }) {
     </svg>
   );
 }
-

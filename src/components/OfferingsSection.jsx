@@ -7,7 +7,7 @@ const DEFAULT_ITEMS = [
 export default function OfferingsSection({ items = DEFAULT_ITEMS }) {
   return (
     <section id="offerings" className="relative bg-white py-16 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 motion-fade-up sm:px-6 lg:px-8">
         <div className="relative">
           <h2 className="text-center text-3xl font-semibold leading-tight tracking-tight text-black sm:text-4xl">
             What we{" "}
@@ -36,17 +36,19 @@ export default function OfferingsSection({ items = DEFAULT_ITEMS }) {
           {items.slice(0, 3).map((item, idx) => (
             <div
               key={`${item.label}-${item.title}-${idx}`}
-              className="grid grid-cols-3 items-center gap-4 px-6 py-4 sm:px-8"
+              className="group grid grid-cols-3 items-center gap-4 px-6 py-4 transition-colors duration-300 hover:bg-emerald-50/40 sm:px-8"
               style={{ gridTemplateColumns: "1fr 2fr 1fr" }}
             >
-              <div className="text-sm font-semibold text-black/70">{item.label}</div>
+              <div className="text-sm font-semibold text-black/70">
+                {item.label}
+              </div>
               <div className="text-sm font-semibold text-black/90 text-center sm:text-left">
                 {item.title}
               </div>
               <div className="flex justify-end">
                 <span
                   aria-hidden="true"
-                  className="text-lg font-semibold text-black/60"
+                  className="text-lg font-semibold text-black/60 transition-transform duration-300 group-hover:translate-x-1"
                 >
                   →
                 </span>
@@ -64,4 +66,3 @@ export default function OfferingsSection({ items = DEFAULT_ITEMS }) {
     </section>
   );
 }
-

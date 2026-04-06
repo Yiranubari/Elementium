@@ -19,7 +19,7 @@ export default function Navbar() {
       ([entry]) => {
         setIsScrolled(!entry.isIntersecting);
       },
-      { threshold: 1 }
+      { threshold: 1 },
     );
 
     observer.observe(sentinelRef.current);
@@ -28,16 +28,25 @@ export default function Navbar() {
 
   return (
     <>
-      <div ref={sentinelRef} className="absolute top-0 h-px w-full" aria-hidden="true" />
+      <div
+        ref={sentinelRef}
+        className="absolute top-0 h-px w-full"
+        aria-hidden="true"
+      />
 
       <header
         className={[
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-          isScrolled ? "border-b border-black/10 bg-white/80 backdrop-blur-md" : "bg-white/95",
+          isScrolled
+            ? "border-b border-black/10 bg-white/80 backdrop-blur-md"
+            : "bg-white/95",
         ].join(" ")}
       >
         <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#home" className="text-lg font-semibold tracking-wide text-black">
+          <a
+            href="#home"
+            className="text-lg font-semibold tracking-wide text-black transition-opacity duration-300 hover:opacity-70"
+          >
             Elementium
           </a>
 
@@ -46,7 +55,7 @@ export default function Navbar() {
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="text-sm font-medium text-black/80 transition-colors hover:text-black"
+                  className="text-sm font-medium text-black/80 transition-colors duration-300 hover:text-black"
                 >
                   {item}
                 </a>
@@ -59,26 +68,26 @@ export default function Navbar() {
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 transition-colors duration-300 hover:bg-black/3 md:hidden"
           >
             <span className="sr-only">Open main menu</span>
             <span className="relative block h-4 w-5">
               <span
                 className={[
                   "absolute left-0 top-0 block h-0.5 w-5 bg-black transition-transform duration-200",
-                  isMenuOpen ? "translate-y-[7px] rotate-45" : "",
+                  isMenuOpen ? "translate-y-1.75 rotate-45" : "",
                 ].join(" ")}
               />
               <span
                 className={[
-                  "absolute left-0 top-[7px] block h-0.5 w-5 bg-black transition-opacity duration-200",
+                  "absolute left-0 top-1.75 block h-0.5 w-5 bg-black transition-opacity duration-200",
                   isMenuOpen ? "opacity-0" : "opacity-100",
                 ].join(" ")}
               />
               <span
                 className={[
-                  "absolute left-0 top-[14px] block h-0.5 w-5 bg-black transition-transform duration-200",
-                  isMenuOpen ? "-translate-y-[7px] -rotate-45" : "",
+                  "absolute left-0 top-3.5 block h-0.5 w-5 bg-black transition-transform duration-200",
+                  isMenuOpen ? "-translate-y-1.75 -rotate-45" : "",
                 ].join(" ")}
               />
             </span>
@@ -86,14 +95,14 @@ export default function Navbar() {
         </nav>
 
         {isMenuOpen ? (
-          <div className="border-t border-black/10 bg-white md:hidden">
+          <div className="border-t border-black/10 bg-white motion-fade-up md:hidden">
             <ul className="mx-auto flex max-w-6xl flex-col px-4 py-3 sm:px-6">
               {NAV_LINKS.map((item) => (
                 <li key={`mobile-${item}`}>
                   <a
                     href={`#${item.toLowerCase()}`}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block py-2 text-sm font-medium text-black/80 hover:text-black"
+                    className="block py-2 text-sm font-medium text-black/80 transition-colors duration-300 hover:text-black"
                   >
                     {item}
                   </a>
