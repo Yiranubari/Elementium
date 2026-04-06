@@ -17,17 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes gentleFloat {
   0%,
   100% {
@@ -49,15 +38,25 @@ html {
 }
 
 .motion-fade-up {
-  animation: fadeUp 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.motion-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .motion-delay-1 {
-  animation-delay: 100ms;
+  transition-delay: 100ms;
 }
 
 .motion-delay-2 {
-  animation-delay: 200ms;
+  transition-delay: 200ms;
 }
 
 .motion-float-slow {
@@ -92,6 +91,13 @@ html {
   .motion-float-slow,
   .motion-pulse-soft {
     animation: none !important;
+  }
+
+  .motion-fade-up,
+  .motion-fade-up.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 
   .card-hover,
