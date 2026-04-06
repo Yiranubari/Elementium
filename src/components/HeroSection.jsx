@@ -1,3 +1,6 @@
+import CirclePhoto from "./ui/CirclePhoto.jsx";
+import DecorativeBlob from "./ui/DecorativeBlob.jsx";
+
 const TEAM_PHOTOS = [
   { src: "/assets/images/team-1.jpg", alt: "Team member portrait 1", size: "h-16 w-16", pos: "left-[2%] top-8" },
   { src: "/assets/images/team-2.jpg", alt: "Team member portrait 2", size: "h-20 w-20", pos: "left-[18%] top-2" },
@@ -34,24 +37,16 @@ export default function HeroSection() {
         <div className="relative mt-12 h-28 sm:h-32">
           {TEAM_PHOTOS.map((photo) => (
             <div key={photo.src} className={`absolute ${photo.pos}`}>
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                className={`${photo.size} rounded-full object-cover ring-4 ring-white shadow-md`}
-              />
+              <CirclePhoto src={photo.src} alt={photo.alt} size={photo.size} />
             </div>
           ))}
         </div>
       </div>
 
-      <svg
-        className="pointer-events-none absolute -right-6 top-24 h-24 w-24 text-violet-500/90"
-        viewBox="0 0 120 120"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path d="M60 6c12 24 40 34 40 62 0 25-20 46-45 46S10 92 10 67c0-28 28-38 50-61z" />
-      </svg>
+      <DecorativeBlob
+        variant="purple"
+        className="-right-6 top-24 h-24 w-24 text-violet-500/90"
+      />
 
       <svg
         className="pointer-events-none absolute left-0 top-44 h-24 w-24 text-rose-400/80 sm:h-32 sm:w-32"

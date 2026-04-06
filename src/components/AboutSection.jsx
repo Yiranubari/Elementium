@@ -1,3 +1,7 @@
+import DecorativeBlob from "./ui/DecorativeBlob.jsx";
+import CirclePhoto from "./ui/CirclePhoto.jsx";
+import ReadMoreLink from "./ui/ReadMoreLink.jsx";
+
 export default function AboutSection() {
   return (
     <section id="studio" className="relative overflow-hidden bg-white py-16 sm:py-20">
@@ -13,19 +17,13 @@ export default function AboutSection() {
             move from ideas to measurable impact with clarity and confidence.
           </p>
 
-          <a
-            href="#"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-black transition-opacity hover:opacity-70"
-          >
-            Read more
-            <span aria-hidden="true">→</span>
-          </a>
+          <ReadMoreLink href="#" className="mt-6" />
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
-          <div
-            aria-hidden="true"
-            className="absolute -left-8 -top-8 h-44 w-44 rounded-full bg-pink-200/50 blur-2xl"
+          <DecorativeBlob
+            variant="pink"
+            className="-left-8 -top-8 h-44 w-44 text-pink-200/80 blur-2xl"
           />
 
           <svg
@@ -39,11 +37,11 @@ export default function AboutSection() {
             <path d="M5 68c30-55 70-55 100 0s70 55 100 0 70-55 100 0" />
           </svg>
 
-          <div className="relative z-10 mx-auto h-72 w-72 rounded-full bg-white p-2 shadow-lg sm:h-80 sm:w-80">
-            <img
+          <div className="relative z-10 mx-auto h-72 w-72 sm:h-80 sm:w-80">
+            <CirclePhoto
               src="/assets/images/team-meeting.jpg"
               alt="Team meeting and collaboration"
-              className="h-full w-full rounded-full object-cover"
+              size="h-full w-full"
             />
           </div>
 

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CirclePhoto from "./ui/CirclePhoto.jsx";
+import SectionHeading from "./ui/SectionHeading.jsx";
 
 const CLIENT_PHOTOS = [
   { src: "/assets/images/client-1.jpg", alt: "Client portrait 1", size: "h-14 w-14", pos: "left-0 top-6" },
@@ -15,12 +17,13 @@ export default function TestimonialSection() {
     <section id="testimonials" className="relative bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-2xl font-semibold leading-tight tracking-tight text-black sm:text-3xl">
-            What our customer{" "}
-            <span className="inline-block border-b-4 border-emerald-300 pb-0.5">
-              says About Us
-            </span>
-          </h2>
+          <SectionHeading
+            as="h2"
+            highlight="says About Us"
+            className="text-2xl sm:text-3xl"
+          >
+            What our customer says About Us
+          </SectionHeading>
         </div>
 
         <div className="relative mt-10 flex justify-center">
@@ -49,11 +52,7 @@ export default function TestimonialSection() {
           <div className="pointer-events-none absolute inset-0">
             {CLIENT_PHOTOS.map((photo) => (
               <div key={photo.src} className={`absolute ${photo.pos}`}>
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className={`${photo.size} rounded-full object-cover ring-4 ring-white shadow-md`}
-                />
+                <CirclePhoto src={photo.src} alt={photo.alt} size={photo.size} />
               </div>
             ))}
           </div>

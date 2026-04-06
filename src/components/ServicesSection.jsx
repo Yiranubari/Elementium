@@ -1,3 +1,6 @@
+import CirclePhoto from "./ui/CirclePhoto.jsx";
+import ReadMoreLink from "./ui/ReadMoreLink.jsx";
+
 function DecorativeTriangles() {
   return (
     <>
@@ -27,11 +30,11 @@ export default function ServicesSection() {
     <section id="services" className="relative overflow-hidden bg-white py-16 sm:py-20">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
-          <div className="relative z-10 mx-auto h-72 w-72 rounded-full bg-white p-2 shadow-lg sm:h-80 sm:w-80">
-            <img
+          <div className="relative z-10 mx-auto h-72 w-72 sm:h-80 sm:w-80">
+            <CirclePhoto
               src="/assets/images/team-working.jpg"
               alt="Team working together at desk"
-              className="h-full w-full rounded-full object-cover"
+              size="h-full w-full"
             />
           </div>
           <DecorativeTriangles />
@@ -48,13 +51,7 @@ export default function ServicesSection() {
             friction, accelerate momentum, and keep progress sustainable.
           </p>
 
-          <a
-            href="#"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-black transition-opacity hover:opacity-70"
-          >
-            Read more
-            <span aria-hidden="true">→</span>
-          </a>
+          <ReadMoreLink href="#" className="mt-6" />
         </div>
       </div>
     </section>

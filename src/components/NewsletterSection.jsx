@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DecorativeBlob from "./ui/DecorativeBlob.jsx";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -13,14 +14,10 @@ export default function NewsletterSection() {
       className="relative overflow-hidden py-16 sm:py-20"
       style={{ backgroundColor: "#D4E8D8" }}
     >
-      <svg
-        className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 text-violet-500/90 sm:h-36 sm:w-36"
-        viewBox="0 0 120 120"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path d="M60 6c12 24 40 34 40 62 0 25-20 46-45 46S10 92 10 67c0-28 28-38 50-61z" />
-      </svg>
+      <DecorativeBlob
+        variant="purple"
+        className="-right-8 -top-8 h-28 w-28 text-violet-500/90 sm:h-36 sm:w-36"
+      />
 
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-3xl font-semibold leading-tight tracking-tight text-black sm:text-5xl">
